@@ -1,3 +1,5 @@
+package Vistas;
+
 
 import javax.swing.JTextArea;
 
@@ -48,12 +50,13 @@ public class vLigaEspa extends javax.swing.JFrame {
         grupo8 = new javax.swing.ButtonGroup();
         grupo9 = new javax.swing.ButtonGroup();
         grupo10 = new javax.swing.ButtonGroup();
+        jPanel2 = new javax.swing.JPanel();
+        jButton1 = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
+        cbEspa = new javax.swing.JComboBox<>();
+        jButton2 = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         ligaEspa = new javax.swing.JTextArea();
-        cbEspa = new javax.swing.JComboBox<>();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
         jRadioButton1 = new javax.swing.JRadioButton();
@@ -86,6 +89,8 @@ public class vLigaEspa extends javax.swing.JFrame {
         jRadioButton31 = new javax.swing.JRadioButton();
         jRadioButton32 = new javax.swing.JRadioButton();
         jRadioButton33 = new javax.swing.JRadioButton();
+        jLabel3 = new javax.swing.JLabel();
+        lblNombre = new javax.swing.JLabel();
 
         jRadioButton7.setText("1");
 
@@ -107,9 +112,12 @@ public class vLigaEspa extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        ligaEspa.setColumns(20);
-        ligaEspa.setRows(5);
-        jScrollPane1.setViewportView(ligaEspa);
+        jPanel2.setBackground(new java.awt.Color(54, 54, 54));
+
+        jButton1.setText("GUARDAR");
+
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel1.setText("LIGA ESPAÑOLA");
 
         cbEspa.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "JORNADA 1", "JORNADA 2", "JORNADA 3", "JORNADA 4", "JORNADA 5", "JORNADA 6", "JORNADA 7", "JORNADA 8", "JORNADA 9", "JORNADA 10", "JORNADA 11", "JORNADA 12", "JORNADA 13", "JORNADA 14", "JORNADA 15", "JORNADA 16", "JORNADA 17", "JORNADA 18", "JORNADA 19", "JORNADA 20", "JORNADA 21", "JORNADA 22", "JORNADA 23", "JORNADA 24", "JORNADA 25", "JORNADA 26", "JORNADA 27", "JORNADA 28", "JORNADA 29", "JORNADA 30", "JORNADA 31", "JORNADA 32", "JORNADA 33", "JORNADA 34", "JORNADA 35", "JORNADA 36", "JORNADA 37", "JORNADA 38" }));
         cbEspa.addActionListener(new java.awt.event.ActionListener() {
@@ -118,8 +126,6 @@ public class vLigaEspa extends javax.swing.JFrame {
             }
         });
 
-        jButton1.setText("GUARDAR");
-
         jButton2.setText("REGRESAR");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -127,8 +133,11 @@ public class vLigaEspa extends javax.swing.JFrame {
             }
         });
 
-        jLabel1.setText("LIGA ESPAÑOLA");
+        ligaEspa.setColumns(20);
+        ligaEspa.setRows(5);
+        jScrollPane1.setViewportView(ligaEspa);
 
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("Quiniela Liga Española");
 
         grupo1.add(jRadioButton1);
@@ -345,54 +354,82 @@ public class vLigaEspa extends javax.swing.JFrame {
                     .addComponent(jRadioButton37)))
         );
 
+        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel3.setText("Nombre:");
+
+        lblNombre.setForeground(new java.awt.Color(255, 255, 255));
+
+        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
+        jPanel2.setLayout(jPanel2Layout);
+        jPanel2Layout.setHorizontalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGap(18, 18, 18)
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGap(39, 39, 39)
+                        .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, 0)
+                        .addComponent(lblNombre, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(204, Short.MAX_VALUE))
+            .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel2Layout.createSequentialGroup()
+                    .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jPanel2Layout.createSequentialGroup()
+                            .addGap(223, 223, 223)
+                            .addComponent(jLabel2))
+                        .addGroup(jPanel2Layout.createSequentialGroup()
+                            .addGap(388, 388, 388)
+                            .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(jLabel1)
+                                .addComponent(cbEspa, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGroup(jPanel2Layout.createSequentialGroup()
+                                    .addGap(2, 2, 2)
+                                    .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(jButton1)
+                                        .addComponent(jButton2))))))
+                    .addContainerGap(78, Short.MAX_VALUE)))
+        );
+        jPanel2Layout.setVerticalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                .addContainerGap(23, Short.MAX_VALUE)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblNombre, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 358, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(47, 47, 47))
+            .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel2Layout.createSequentialGroup()
+                    .addContainerGap()
+                    .addComponent(jLabel2)
+                    .addGap(39, 39, 39)
+                    .addComponent(jLabel1)
+                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                    .addComponent(cbEspa, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(177, 177, 177)
+                    .addComponent(jButton1)
+                    .addGap(39, 39, 39)
+                    .addComponent(jButton2)
+                    .addContainerGap(112, Short.MAX_VALUE)))
+        );
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel2)
-                .addGap(232, 232, 232))
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(33, 33, 33)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel1)
-                    .addComponent(cbEspa, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(13, 13, 13)
-                        .addComponent(jButton1))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(2, 2, 2)
-                        .addComponent(jButton2)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 22, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(21, Short.MAX_VALUE))
+            .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(14, 14, 14)
-                .addComponent(jLabel2)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 358, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(6, 6, 6)
-                        .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(39, 39, 39)
-                        .addComponent(jLabel1)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(cbEspa, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(63, 63, 63)
-                        .addComponent(jButton1)
-                        .addGap(153, 153, 153)
-                        .addComponent(jButton2)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
@@ -409,7 +446,7 @@ public class vLigaEspa extends javax.swing.JFrame {
         // TODO add your handling code here:
         String selectedItem = (String) cbEspa.getSelectedItem();
      ligaEspa.setText("");
-     if (selectedItem.equals("JORNADA 1")) {
+     if(selectedItem.equals("JORNADA 1")) {
     ligaEspa.append(" Almeria vs Rayo \n\n");
     ligaEspa.append(" Sevilla vs Valencia\n\n");
     ligaEspa.append(" R.Sociedad vs Girona \n\n");
@@ -919,7 +956,9 @@ public class vLigaEspa extends javax.swing.JFrame {
     private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
     private javax.swing.JRadioButton jRadioButton1;
     private javax.swing.JRadioButton jRadioButton10;
     private javax.swing.JRadioButton jRadioButton11;
@@ -960,6 +999,7 @@ public class vLigaEspa extends javax.swing.JFrame {
     private javax.swing.JRadioButton jRadioButton8;
     private javax.swing.JRadioButton jRadioButton9;
     private javax.swing.JScrollPane jScrollPane1;
+    public javax.swing.JLabel lblNombre;
     private javax.swing.JTextArea ligaEspa;
     // End of variables declaration//GEN-END:variables
 }
