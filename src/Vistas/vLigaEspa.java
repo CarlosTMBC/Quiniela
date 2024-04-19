@@ -19,7 +19,7 @@ public class vLigaEspa extends javax.swing.JFrame {
      */
     public vLigaEspa() {
         initComponents();
-        ligaEspa.setEditable(false);
+        ligaEspa.setEditable(false);//esta linea de comando evita que se pueda editar el TextArea
     }
 
     /**
@@ -437,16 +437,17 @@ public class vLigaEspa extends javax.swing.JFrame {
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
-        vQuiniela vn= new vQuiniela();
-        vn.setVisible(true);
-        this.dispose();
+        vQuiniela vn= new vQuiniela();//En esta línea, se crea una nueva instancia de la clase vQuiniela.
+        vn.setVisible(true);//En esta línea, se crea una nueva instancia de la clase vQuiniela.
+        this.dispose();//Esta línea cierra la ventana actual.
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void cbEspaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbEspaActionPerformed
         // TODO add your handling code here:
-        String selectedItem = (String) cbEspa.getSelectedItem();
-     ligaEspa.setText("");
-     if(selectedItem.equals("JORNADA 1")) {
+        String selectedItem = (String) cbEspa.getSelectedItem();//Esta línea obtiene el elemento seleccionado actualmente del combo box (cbEspa) y lo asigna a la variable selectedItem.
+     ligaEspa.setText("");// Esta línea limpia el contenido del campo de texto ligaEspa estableciendo su contenido a una cadena vacía
+     if(selectedItem.equals("JORNADA 1")) {// Esta línea verifica si el valor de selectedItem es igual a la cadena de texto 
+         //se agrega contenido al final del objeto
     ligaEspa.append(" Almeria vs Rayo \n\n");
     ligaEspa.append(" Sevilla vs Valencia\n\n");
     ligaEspa.append(" R.Sociedad vs Girona \n\n");
@@ -457,7 +458,7 @@ public class vLigaEspa extends javax.swing.JFrame {
     ligaEspa.append(" Getafe vs Barcelona \n\n");
     ligaEspa.append(" Cádiz vs Alavés \n\n");
     ligaEspa.append(" Atlético vs Granada \n\n");
-    }
+    }//se agrega contenido al final del objeto
      else if (selectedItem.equals("JORNADA 2")){
          ligaEspa.append(" Mallorca vs Villarreal \n\n");
          ligaEspa.append(" Valencia vs Las Palmas \n\n");
@@ -469,7 +470,7 @@ public class vLigaEspa extends javax.swing.JFrame {
          ligaEspa.append(" Betis vs Atlético      \n\n");
          ligaEspa.append(" Alavés vs Sevilla      \n\n");
          ligaEspa.append(" Granada vs Rayo       \n\n");      
-     }
+     }//se agrega contenido al final del objeto
      else if (selectedItem.equals("JORNADA 3")){
          ligaEspa.append(" Las Palmas vs R. Sociedad \n\n");
          ligaEspa.append(" Celta vs Real Madrid\n\n");
@@ -481,7 +482,7 @@ public class vLigaEspa extends javax.swing.JFrame {
          ligaEspa.append(" Athletic vs Betis \n\n");
          ligaEspa.append(" Getafe vs Alavés \n\n");
          ligaEspa.append(" Rayo vs Atlético  \n\n");
-        }
+        }//se agrega contenido al final del objeto
      else if (selectedItem.equals("JORNADA 4")){
          ligaEspa.append(" Cádiz vs Villarreal \n\n");
          ligaEspa.append(" Almería vs Celta \n\n");

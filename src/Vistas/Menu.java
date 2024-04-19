@@ -138,9 +138,9 @@ public class Menu extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        Participantes frmParticipantes = new Participantes();
-        frmParticipantes.setVisible(true);
-        frmParticipantes.setLocationRelativeTo(this);
+        Participantes frmParticipantes = new Participantes();//Esta línea crea una nueva instancia de la clase Participantes y la almacena en la variable frmParticipantes
+        frmParticipantes.setVisible(true);//Esta línea hace que el formulario frmParticipantes sea visible para el usuario.
+        frmParticipantes.setLocationRelativeTo(this);//Esta línea establece la posición de la ventana frmParticipantes relativa a otro componente (this)
                 
     }//GEN-LAST:event_jButton2ActionPerformed
 

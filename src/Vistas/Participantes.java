@@ -9,8 +9,8 @@ package Vistas;
  * @author carlt
  */
 public class Participantes extends javax.swing.JFrame {
-String nombre;
-String apellido;
+String nombre;//ACA SE ALMACENA NOMBRE DEL PARTICIPANTE
+String apellido;//ACA SE ALMACENA APELLIDO DEL PARTICIPANTE
     /**
      * Creates new form Participantes
      */
@@ -172,32 +172,32 @@ String apellido;
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnIngresarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnIngresarActionPerformed
-        vQuiniela quin = new vQuiniela();
-         nombre =this.txtNombre.getText();
-         apellido =this.txtApellidos.getText();
-        txtNombre.setText("");
-        txtApellidos.setText("");
-        this.txtDPI.setText("");
-        this.txtTelefono.setText("");
-        quin.lblNombre.setText(nombre+" "+ apellido);
+        vQuiniela quin = new vQuiniela();//SE CREA EL OBJETO vQUINIELA y se ASIGNA A LA VARIABLE quin
+         nombre =this.txtNombre.getText(); //se obtiene el nombre del paticipante del txtnombre y se guarda en la variable nombre
+         apellido =this.txtApellidos.getText();//se obtiene el apellido del paticipante del txtApellidos y se guarda en la variable apellido
+        txtNombre.setText("");//limpia lo antes ingresado en las cajas de texto
+        txtApellidos.setText("");//limpia lo antes ingresado en las cajas de texto
+        this.txtDPI.setText("");//LIMPIA LO INGRESADO EN LA CAJA DE TEXTO txtDPI
+        this.txtTelefono.setText("");//LIMPIA LO INGRESADO EN LA CAJA DE TEXTO txtTelefono
+        quin.lblNombre.setText(nombre+" "+ apellido);// en el objeto quin.lblNombre se va setear y concatenar con lo que se haya almacenado en las variables en nombre y apellido
     }//GEN-LAST:event_btnIngresarActionPerformed
 
     private void btnNacionalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNacionalActionPerformed
-        vQuiniela quin = new vQuiniela();
-        quin.setVisible(true);
-        quin.setLocationRelativeTo(null);
-        quin.lblNombre.setText(nombre+" "+ apellido);
+        vQuiniela quin = new vQuiniela();// Esta línea crea un nuevo objeto de la clase,vQuiniela y lo asigna a la variable quin para trabajar con ella 
+        quin.setVisible(true);//Esta línea establece que la ventana (quin, que es una instancia de vQuiniela) debe ser visible.
+        quin.setLocationRelativeTo(null);//Esta línea coloca la ventana quin en el centro de la pantalla.
+        quin.lblNombre.setText(nombre+" "+ apellido);//Esta línea establece el texto de la etiqueta quin.lblNombre concatenando nombre y apellido con un espacio entre ellos. 
         
         
 // TODO add your handling code here:
     }//GEN-LAST:event_btnNacionalActionPerformed
 
     private void btnEspañolaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEspañolaActionPerformed
-        vLigaEspa quin = new vLigaEspa();
-        quin.setVisible(true);
-        quin.setLocationRelativeTo(null);
+        vLigaEspa quin = new vLigaEspa();// Esta línea crea un nuevo objeto de la clase,vLigaEspa y lo asigna a la variable quin para trabajar con ella 
+        quin.setVisible(true);//Esta línea establece que la ventana (quin, que es una instancia de vQuiniela) debe ser visible.
+        quin.setLocationRelativeTo(null);//Esta línea coloca la ventana quin en el centro de la pantalla.
         
-        quin.lblNombre.setText(nombre+" "+ apellido);
+        quin.lblNombre.setText(nombre+" "+ apellido);//Esta línea establece el texto de la etiqueta quin.lblNombre concatenando nombre y apellido con un espacio entre ellos. 
     }//GEN-LAST:event_btnEspañolaActionPerformed
 
     /**
