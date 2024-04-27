@@ -28,6 +28,7 @@ public class frmVistaPrincipal extends javax.swing.JFrame {
         submnLiga = new javax.swing.JMenuItem();
         jMenu2 = new javax.swing.JMenu();
         jMenu3 = new javax.swing.JMenu();
+        jMenuItem1 = new javax.swing.JMenuItem();
 
         jCheckBoxMenuItem1.setSelected(true);
         jCheckBoxMenuItem1.setText("jCheckBoxMenuItem1");
@@ -66,6 +67,15 @@ public class frmVistaPrincipal extends javax.swing.JFrame {
         jMenuBar1.add(jMenu2);
 
         jMenu3.setText("Iniciar Sesion");
+
+        jMenuItem1.setText("Login");
+        jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem1ActionPerformed(evt);
+            }
+        });
+        jMenu3.add(jMenuItem1);
+
         jMenuBar1.add(jMenu3);
 
         setJMenuBar(jMenuBar1);
@@ -88,10 +98,26 @@ public class frmVistaPrincipal extends javax.swing.JFrame {
         // TODO add your handling code here:
         frmLigas VistaLigas = new frmLigas();
         VistaLigas.setVisible(true);
-        //VistaLigas.setLocationRelativeTo(this);
-        
-        CentrarVentana(VistaLigas); 
+       
+        // Obtener el tamaño de la ventana principal
+        Dimension ventanaPrinSize = VentanaPrin.getSize();
+
+        // Calcular las coordenadas para centrar la ventana secundaria en la ventana principal
+        int x = (ventanaPrinSize.width - VistaLigas.getWidth()) / 2;
+        int y = (ventanaPrinSize.height - VistaLigas.getHeight()) / 2;
+
+        // Establecer la ubicación de la ventana secundaria centrada en la ventana principal
+        VistaLigas.setLocation(x, y);
+
+       VentanaPrin.add(VistaLigas);
+        //CentrarVentana(VistaLigas); 
     }//GEN-LAST:event_submnLigaActionPerformed
+
+    private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
+        frmLogin login = new frmLogin();
+        VentanaPrin.add(login);
+        //login.setVisible(true);
+    }//GEN-LAST:event_jMenuItem1ActionPerformed
 
         void CentrarVentana(JInternalFrame frame){
         VentanaPrin.add(frame);
@@ -145,6 +171,7 @@ public class frmVistaPrincipal extends javax.swing.JFrame {
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenu jMenu3;
     private javax.swing.JMenuBar jMenuBar1;
+    private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JMenu mbarMenu;
     private javax.swing.JMenuItem submnLiga;
     // End of variables declaration//GEN-END:variables

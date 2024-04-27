@@ -4,7 +4,7 @@
  */
 package Main;
 
-import Vistas.Menu;
+import Vistas.*;
 
 /**
  *
@@ -16,7 +16,7 @@ public class main {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        Menu menu = new Menu();
+        frmLogin menu = new frmLogin();
         menu.setVisible(true);
         menu.setLocationRelativeTo(null);
         

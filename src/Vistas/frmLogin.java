@@ -153,7 +153,7 @@ public class frmLogin extends javax.swing.JFrame {
         btnLogin.setBounds(610, 340, 90, 30);
 
         jLabel2.setFont(new java.awt.Font("Baskerville Old Face", 1, 12)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(102, 102, 102));
+        jLabel2.setForeground(new java.awt.Color(0, 153, 153));
         jLabel2.setText("¿Ha olvidado la contraseña?");
         jPanel4.add(jLabel2);
         jLabel2.setBounds(580, 380, 160, 20);
@@ -162,19 +162,26 @@ public class frmLogin extends javax.swing.JFrame {
         txtUsuario.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         txtUsuario.setForeground(new java.awt.Color(204, 204, 204));
         txtUsuario.setText("Nombre de Usuario");
+        txtUsuario.setToolTipText("Nombre de Usuario");
         txtUsuario.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 1, 0, new java.awt.Color(127, 219, 228)));
+        txtUsuario.setName(""); // NOI18N
         txtUsuario.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 txtUsuarioMouseClicked(evt);
             }
         });
+        txtUsuario.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtUsuarioActionPerformed(evt);
+            }
+        });
         jPanel4.add(txtUsuario);
         txtUsuario.setBounds(480, 150, 290, 18);
+        txtUsuario.getAccessibleContext().setAccessibleName("");
 
         txtContraseña.setBackground(new java.awt.Color(251, 252, 253));
         txtContraseña.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         txtContraseña.setForeground(new java.awt.Color(204, 204, 204));
-        txtContraseña.setText("jPasswordField1");
         txtContraseña.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 1, 0, new java.awt.Color(127, 219, 228)));
         txtContraseña.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -201,6 +208,11 @@ public class frmLogin extends javax.swing.JFrame {
         jCheckBox1.setForeground(new java.awt.Color(102, 102, 102));
         jCheckBox1.setText("Mantener Conectado");
         jCheckBox1.setFocusable(false);
+        jCheckBox1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCheckBox1ActionPerformed(evt);
+            }
+        });
         jPanel4.add(jCheckBox1);
         jCheckBox1.setBounds(480, 280, 150, 19);
 
@@ -271,6 +283,14 @@ public class frmLogin extends javax.swing.JFrame {
         frmParticipantes.setVisible(true);
         frmParticipantes.setLocationRelativeTo(this);
     }//GEN-LAST:event_btnCrearCuentaActionPerformed
+
+    private void txtUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtUsuarioActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtUsuarioActionPerformed
+
+    private void jCheckBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jCheckBox1ActionPerformed
 
     /**
      * @param args the command line arguments
