@@ -30,7 +30,7 @@ public class vQuiniela extends javax.swing.JFrame {
        
         
         initComponents();
-         ligaNac.setEditable(false);
+         ligaNac.setEditable(false);//EL TEXTAREA NO SE PODRA EDITAR
     }
 
     /**
@@ -331,17 +331,17 @@ public class vQuiniela extends javax.swing.JFrame {
 
     private void CboxCategoriasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CboxCategoriasActionPerformed
         // TODO add your handling code here:
-     String selectedItem = (String) CboxCategorias.getSelectedItem();
-     ligaNac.setText("");
-     if (selectedItem.equals("JORNADA 1")) {
-    ligaNac.append(" Antigua GFC vs Achuapa\n\n");
+     String selectedItem = (String) CboxCategorias.getSelectedItem();//Esta línea de código obtiene el elemento seleccionado actualmente en un componente gráfico llamado CboxCategorias
+     ligaNac.setText("");//Esta línea de código está limpiando (estableciendo a una cadena vacía) el contenido del área de texto ligaNac.
+     if (selectedItem.equals("JORNADA 1")) {//Esta línea establece una condición. La condición evalúa si el valor de selectedItem es igual a la cadena 
+    ligaNac.append(" Antigua GFC vs Achuapa\n\n");//Esta linea setea lo que esta dentro del if, evaulua la condicion del valor
     ligaNac.append(" Municipal vs Guastatoya\n\n");
     ligaNac.append(" Comuniaciones vs Xinabajul\n\n");
     ligaNac.append(" Malacateco vs Xelajú MC\n\n");
     ligaNac.append(" Coatepeque vs Cobán Imperial\n\n");
     ligaNac.append(" Zacapa vs Mixco\n\n");
     
-    
+    //se ingresan todos los datos de las jornadas
         } else if (selectedItem.equals("JORNADA 2")) {
     ligaNac.append(" Guastatoya vs Zacapa\n\n");
     ligaNac.append(" Cobán Imperial vs Malacateco\n\n");
@@ -478,10 +478,10 @@ public class vQuiniela extends javax.swing.JFrame {
 
     private void guardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_guardarActionPerformed
    // TODO add your handling code here:
-         String seleccion = "";
-        if (rb1.isSelected()) {
-            seleccion = rb1.getText();
-        } else if (rb2.isSelected()) {
+         String seleccion = "";//Esto inicializa una variable de tipo String llamada seleccion con una cadena vacía
+        if (rb1.isSelected()) {//El código verifica si alguno de los botones de radio rb1, rb2 o rb3 está seleccionado (isSelected()).
+            seleccion = rb1.getText();//Se obtiene la seleccion del radiobutton
+        } else if (rb2.isSelected()) {//si no se obtiene la seleccion de otro radio button
             seleccion = rb2.getText();
         } else if (rb3.isSelected()) {
             seleccion = rb3.getText();
@@ -543,7 +543,8 @@ public class vQuiniela extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-               new vQuiniela().setVisible(true);
+               new vQuiniela().setVisible(true);//: Esta parte del código crea un nuevo objeto de la clase vQuiniela
+               //Después de crear la instancia de vQuiniela, el método setVisible(true) se invoca en ella. 
             }
         });
     }

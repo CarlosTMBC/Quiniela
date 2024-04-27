@@ -13,7 +13,7 @@ public class frmVistaPrincipal extends javax.swing.JFrame {
         
         
         initComponents();
-        this.setExtendedState(MAXIMIZED_BOTH);
+        this.setExtendedState(MAXIMIZED_BOTH);//maximiza la ventana en la que se ejecuta este código, haciéndola ocupar todo el espacio disponible en la pantalla del usuario.
     }
 
     @SuppressWarnings("unchecked")
@@ -120,11 +120,11 @@ public class frmVistaPrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_jMenuItem1ActionPerformed
 
         void CentrarVentana(JInternalFrame frame){
-        VentanaPrin.add(frame);
-        Dimension dimension = VentanaPrin.getSize();
-        Dimension frameVentana = frame.getSize();
+        VentanaPrin.add(frame);// Esta línea agrega la ventana interna (frame) al contenedor principal (VentanaPrin)
+        Dimension dimension = VentanaPrin.getSize();// Esta línea obtiene las dimensiones del contenedor principal (VentanaPrin) y las almacena en un objeto de tipo Dimension llamado dimension.
+        Dimension frameVentana = frame.getSize();//Esta línea tiene la intención de calcular las coordenadas de ubicación para centrar la ventana interna en el contenedor.
         frame.setLocation((dimension.width -frameVentana.height)/100, (dimension.height -frameVentana.width)/100);
-        frame.show();
+        frame.show();//Esta línea muestra la ventana interna (frame) dentro del contenedor principal (VentanaPrin).
     }
     
     

@@ -14,8 +14,8 @@ import javax.swing.ImageIcon;
  * @author carlt
  */
 public class Participantes extends javax.swing.JFrame {
-String nombre;
-String apellido;
+String nombre;//ACA SE ALMACENA NOMBRE DEL PARTICIPANTE
+String apellido;//ACA SE ALMACENA APELLIDO DEL PARTICIPANTE
     /**
      * Creates new form Participantes
      */
@@ -25,16 +25,16 @@ String apellido;
         initComponents();
        Icon iconoActivado = new ImageIcon("C:\\Users\\carlt\\Downloads\\Quiniela\\Quiniela\\src\\Imagenes\\ojo.png");
 Icon iconoDesactivado = new ImageIcon("C:\\Users\\carlt\\Downloads\\Quiniela\\Quiniela\\src\\Imagenes\\invisible.png");
-jToggleButton1.addActionListener(new ActionListener() {
+    btnOjo.addActionListener(new ActionListener() {
     public void actionPerformed(ActionEvent evt) {
-        if (jToggleButton1.isSelected()) {
+        if (btnOjo.isSelected()) {
             // Código a ejecutar cuando el botón está seleccionado
-            jToggleButton1.setIcon(iconoActivado);
-           txtContraseña.setEchoChar((char) 0);
+            btnOjo.setIcon(iconoActivado);
+           txtPass.setEchoChar((char) 0);
         } else {
             // Código a ejecutar cuando el botón no está seleccionado
-            jToggleButton1.setIcon(iconoDesactivado);
-            txtContraseña.setEchoChar('*');
+            btnOjo.setIcon(iconoDesactivado);
+            txtPass.setEchoChar('*');
         } 
     }
 });
@@ -57,19 +57,19 @@ jToggleButton1.addActionListener(new ActionListener() {
         jLabel5 = new javax.swing.JLabel();
         btnCancelar = new javax.swing.JButton();
         btnIngresar = new javax.swing.JButton();
-        txtUsuario = new javax.swing.JTextField();
+        txtNombre = new javax.swing.JTextField();
         jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
         jLabel11 = new javax.swing.JLabel();
-        txtUsuario1 = new javax.swing.JTextField();
-        txtUsuario4 = new javax.swing.JTextField();
-        txtUsuario5 = new javax.swing.JTextField();
-        txtUsuario7 = new javax.swing.JTextField();
-        txtContraseña = new javax.swing.JPasswordField();
-        jToggleButton1 = new javax.swing.JToggleButton();
+        txtApellidos = new javax.swing.JTextField();
+        txtTelefono = new javax.swing.JTextField();
+        txtUsuario = new javax.swing.JTextField();
+        txtDPI = new javax.swing.JTextField();
+        txtPass = new javax.swing.JPasswordField();
+        btnOjo = new javax.swing.JToggleButton();
 
         txtUsuario3.setBackground(new java.awt.Color(251, 252, 253));
         txtUsuario3.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
@@ -127,20 +127,20 @@ jToggleButton1.addActionListener(new ActionListener() {
             }
         });
 
-        txtUsuario.setBackground(new java.awt.Color(251, 252, 253));
-        txtUsuario.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        txtUsuario.setForeground(new java.awt.Color(204, 204, 204));
-        txtUsuario.setToolTipText("Nombre de Usuario");
-        txtUsuario.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 1, 0, new java.awt.Color(127, 219, 228)));
-        txtUsuario.setName(""); // NOI18N
-        txtUsuario.addMouseListener(new java.awt.event.MouseAdapter() {
+        txtNombre.setBackground(new java.awt.Color(251, 252, 253));
+        txtNombre.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        txtNombre.setForeground(new java.awt.Color(204, 204, 204));
+        txtNombre.setToolTipText("Nombre de Usuario");
+        txtNombre.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 1, 0, new java.awt.Color(127, 219, 228)));
+        txtNombre.setName(""); // NOI18N
+        txtNombre.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                txtUsuarioMouseClicked(evt);
+                txtNombreMouseClicked(evt);
             }
         });
-        txtUsuario.addActionListener(new java.awt.event.ActionListener() {
+        txtNombre.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtUsuarioActionPerformed(evt);
+                txtNombreActionPerformed(evt);
             }
         });
 
@@ -168,94 +168,85 @@ jToggleButton1.addActionListener(new ActionListener() {
         jLabel11.setForeground(new java.awt.Color(102, 102, 102));
         jLabel11.setText("NOMBRE");
 
-        txtUsuario1.setBackground(new java.awt.Color(251, 252, 253));
-        txtUsuario1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        txtUsuario1.setForeground(new java.awt.Color(204, 204, 204));
-        txtUsuario1.setToolTipText("Nombre de Usuario");
-        txtUsuario1.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 1, 0, new java.awt.Color(127, 219, 228)));
-        txtUsuario1.setName(""); // NOI18N
-        txtUsuario1.addMouseListener(new java.awt.event.MouseAdapter() {
+        txtApellidos.setBackground(new java.awt.Color(251, 252, 253));
+        txtApellidos.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        txtApellidos.setForeground(new java.awt.Color(204, 204, 204));
+        txtApellidos.setToolTipText("Nombre de Usuario");
+        txtApellidos.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 1, 0, new java.awt.Color(127, 219, 228)));
+        txtApellidos.setName(""); // NOI18N
+        txtApellidos.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                txtUsuario1MouseClicked(evt);
+                txtApellidosMouseClicked(evt);
             }
         });
-        txtUsuario1.addActionListener(new java.awt.event.ActionListener() {
+        txtApellidos.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtUsuario1ActionPerformed(evt);
+                txtApellidosActionPerformed(evt);
             }
         });
 
-        txtUsuario4.setBackground(new java.awt.Color(251, 252, 253));
-        txtUsuario4.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        txtUsuario4.setForeground(new java.awt.Color(204, 204, 204));
-        txtUsuario4.setToolTipText("Nombre de Usuario");
-        txtUsuario4.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 1, 0, new java.awt.Color(127, 219, 228)));
-        txtUsuario4.setName(""); // NOI18N
-        txtUsuario4.addMouseListener(new java.awt.event.MouseAdapter() {
+        txtTelefono.setBackground(new java.awt.Color(251, 252, 253));
+        txtTelefono.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        txtTelefono.setForeground(new java.awt.Color(204, 204, 204));
+        txtTelefono.setToolTipText("Nombre de Usuario");
+        txtTelefono.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 1, 0, new java.awt.Color(127, 219, 228)));
+        txtTelefono.setName(""); // NOI18N
+        txtTelefono.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                txtUsuario4MouseClicked(evt);
+                txtTelefonoMouseClicked(evt);
             }
         });
-        txtUsuario4.addActionListener(new java.awt.event.ActionListener() {
+        txtTelefono.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtUsuario4ActionPerformed(evt);
+                txtTelefonoActionPerformed(evt);
             }
         });
 
-        txtUsuario5.setBackground(new java.awt.Color(251, 252, 253));
-        txtUsuario5.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        txtUsuario5.setForeground(new java.awt.Color(204, 204, 204));
-        txtUsuario5.setToolTipText("Nombre de Usuario");
-        txtUsuario5.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 1, 0, new java.awt.Color(127, 219, 228)));
-        txtUsuario5.setName(""); // NOI18N
-        txtUsuario5.addMouseListener(new java.awt.event.MouseAdapter() {
+        txtUsuario.setBackground(new java.awt.Color(251, 252, 253));
+        txtUsuario.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        txtUsuario.setForeground(new java.awt.Color(204, 204, 204));
+        txtUsuario.setToolTipText("Nombre de Usuario");
+        txtUsuario.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 1, 0, new java.awt.Color(127, 219, 228)));
+        txtUsuario.setName(""); // NOI18N
+        txtUsuario.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                txtUsuario5MouseClicked(evt);
+                txtUsuarioMouseClicked(evt);
             }
         });
-        txtUsuario5.addActionListener(new java.awt.event.ActionListener() {
+        txtUsuario.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtUsuario5ActionPerformed(evt);
+                txtUsuarioActionPerformed(evt);
             }
         });
 
-        txtUsuario7.setBackground(new java.awt.Color(251, 252, 253));
-        txtUsuario7.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        txtUsuario7.setForeground(new java.awt.Color(204, 204, 204));
-        txtUsuario7.setToolTipText("Nombre de Usuario");
-        txtUsuario7.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 1, 0, new java.awt.Color(127, 219, 228)));
-        txtUsuario7.setName(""); // NOI18N
-        txtUsuario7.addMouseListener(new java.awt.event.MouseAdapter() {
+        txtDPI.setBackground(new java.awt.Color(251, 252, 253));
+        txtDPI.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        txtDPI.setForeground(new java.awt.Color(204, 204, 204));
+        txtDPI.setToolTipText("Nombre de Usuario");
+        txtDPI.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 1, 0, new java.awt.Color(127, 219, 228)));
+        txtDPI.setName(""); // NOI18N
+        txtDPI.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                txtUsuario7MouseClicked(evt);
+                txtDPIMouseClicked(evt);
             }
         });
-        txtUsuario7.addActionListener(new java.awt.event.ActionListener() {
+        txtDPI.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtUsuario7ActionPerformed(evt);
+                txtDPIActionPerformed(evt);
             }
         });
 
-        txtContraseña.setBackground(new java.awt.Color(251, 252, 253));
-        txtContraseña.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        txtContraseña.setForeground(new java.awt.Color(204, 204, 204));
-        txtContraseña.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 1, 0, new java.awt.Color(127, 219, 228)));
-        txtContraseña.addMouseListener(new java.awt.event.MouseAdapter() {
+        txtPass.setBackground(new java.awt.Color(251, 252, 253));
+        txtPass.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        txtPass.setForeground(new java.awt.Color(204, 204, 204));
+        txtPass.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 1, 0, new java.awt.Color(127, 219, 228)));
+        txtPass.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                txtContraseñaMouseClicked(evt);
+                txtPassMouseClicked(evt);
             }
         });
 
-        jToggleButton1.setForeground(new java.awt.Color(0, 0, 255));
-        jToggleButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/invisible.png"))); // NOI18N
-        jToggleButton1.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 1, 0, new java.awt.Color(127, 219, 228)));
-        jToggleButton1.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        jToggleButton1.setFocusPainted(false);
-        jToggleButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jToggleButton1ActionPerformed(evt);
-            }
-        });
+        btnOjo.setText("jToggleButton1");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -273,24 +264,23 @@ jToggleButton1.addActionListener(new ActionListener() {
                 .addGap(412, 412, 412))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jLabel6)
                     .addComponent(jLabel11)
-                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(jLabel7)
-                        .addComponent(txtUsuario)
-                        .addComponent(jLabel9)
-                        .addComponent(txtUsuario5)
-                        .addComponent(txtUsuario1)
-                        .addComponent(txtUsuario4)
-                        .addGroup(jPanel1Layout.createSequentialGroup()
-                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(jLabel8)
-                                .addComponent(txtContraseña, javax.swing.GroupLayout.PREFERRED_SIZE, 296, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addComponent(jToggleButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addComponent(jLabel10)
-                        .addComponent(txtUsuario7)))
+                    .addComponent(jLabel7)
+                    .addComponent(txtNombre, javax.swing.GroupLayout.DEFAULT_SIZE, 355, Short.MAX_VALUE)
+                    .addComponent(jLabel9)
+                    .addComponent(txtUsuario)
+                    .addComponent(txtApellidos)
+                    .addComponent(txtTelefono)
+                    .addComponent(jLabel10)
+                    .addComponent(txtDPI)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel8)
+                            .addComponent(txtPass, javax.swing.GroupLayout.PREFERRED_SIZE, 296, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(btnOjo, javax.swing.GroupLayout.PREFERRED_SIZE, 1, Short.MAX_VALUE)))
                 .addGap(179, 179, 179))
         );
         jPanel1Layout.setVerticalGroup(
@@ -301,30 +291,29 @@ jToggleButton1.addActionListener(new ActionListener() {
                 .addGap(36, 36, 36)
                 .addComponent(jLabel11)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(txtUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(txtNombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jLabel7)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(txtUsuario1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(txtApellidos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jLabel6)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(txtUsuario5, javax.swing.GroupLayout.PREFERRED_SIZE, 18, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jLabel8)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(txtContraseña, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jToggleButton1))
+                .addComponent(txtUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 18, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jLabel8)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(txtPass, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnOjo))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jLabel9)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(txtUsuario4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(txtTelefono, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jLabel10)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(txtUsuario7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(txtDPI, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 86, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnIngresar)
@@ -348,26 +337,46 @@ jToggleButton1.addActionListener(new ActionListener() {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void txtUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtUsuarioActionPerformed
+    private void txtNombreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNombreActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_txtUsuarioActionPerformed
+    }//GEN-LAST:event_txtNombreActionPerformed
 
-    private void txtUsuarioMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txtUsuarioMouseClicked
+    private void txtNombreMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txtNombreMouseClicked
         // TODO add your handling code here:
-        txtUsuario.setText("");
-    }//GEN-LAST:event_txtUsuarioMouseClicked
+        txtNombre.setText("");
+    }//GEN-LAST:event_txtNombreMouseClicked
 
     private void btnIngresarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnIngresarActionPerformed
-        
+
+        vQuiniela quin = new vQuiniela();//SE CREA EL OBJETO vQUINIELA y se ASIGNA A LA VARIABLE quin
+         nombre =this.txtNombre.getText(); //se obtiene el nombre del paticipante del txtnombre y se guarda en la variable nombre
+         apellido =this.txtApellidos.getText();//se obtiene el apellido del paticipante del txtApellidos y se guarda en la variable apellido
+        txtNombre.setText("");//limpia lo antes ingresado en las cajas de texto
+        txtApellidos.setText("");//limpia lo antes ingresado en las cajas de texto
+        this.txtDPI.setText("");//LIMPIA LO INGRESADO EN LA CAJA DE TEXTO txtDPI
+        this.txtTelefono.setText("");//LIMPIA LO INGRESADO EN LA CAJA DE TEXTO txtTelefono
+        quin.lblNombre.setText(nombre+" "+ apellido);// en el objeto quin.lblNombre se va setear y concatenar con lo que se haya almacenado en las variables en nombre y apellido
+
     }//GEN-LAST:event_btnIngresarActionPerformed
 
-    private void txtUsuario1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txtUsuario1MouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtUsuario1MouseClicked
 
-    private void txtUsuario1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtUsuario1ActionPerformed
+    private void txtApellidosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txtApellidosMouseClicked
         // TODO add your handling code here:
-    }//GEN-LAST:event_txtUsuario1ActionPerformed
+    }//GEN-LAST:event_txtApellidosMouseClicked
+
+    private void btnNacionalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNacionalActionPerformed
+        vQuiniela quin = new vQuiniela();// Esta línea crea un nuevo objeto de la clase,vQuiniela y lo asigna a la variable quin para trabajar con ella 
+        quin.setVisible(true);//Esta línea establece que la ventana (quin, que es una instancia de vQuiniela) debe ser visible.
+        quin.setLocationRelativeTo(null);//Esta línea coloca la ventana quin en el centro de la pantalla.
+        quin.lblNombre.setText(nombre+" "+ apellido);//Esta línea establece el texto de la etiqueta quin.lblNombre concatenando nombre y apellido con un espacio entre ellos. 
+        
+        
+// TODO add your handling code here:
+    }//GEN-LAST:event_btnNacionalActionPerformed
+
+    private void txtApellidosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtApellidosActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtApellidosActionPerformed
 
     private void txtUsuario3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txtUsuario3MouseClicked
         // TODO add your handling code here:
@@ -377,21 +386,21 @@ jToggleButton1.addActionListener(new ActionListener() {
         // TODO add your handling code here:
     }//GEN-LAST:event_txtUsuario3ActionPerformed
 
-    private void txtUsuario4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txtUsuario4MouseClicked
+    private void txtTelefonoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txtTelefonoMouseClicked
         // TODO add your handling code here:
-    }//GEN-LAST:event_txtUsuario4MouseClicked
+    }//GEN-LAST:event_txtTelefonoMouseClicked
 
-    private void txtUsuario4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtUsuario4ActionPerformed
+    private void txtTelefonoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtTelefonoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_txtUsuario4ActionPerformed
+    }//GEN-LAST:event_txtTelefonoActionPerformed
 
-    private void txtUsuario5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txtUsuario5MouseClicked
+    private void txtUsuarioMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txtUsuarioMouseClicked
         // TODO add your handling code here:
-    }//GEN-LAST:event_txtUsuario5MouseClicked
+    }//GEN-LAST:event_txtUsuarioMouseClicked
 
-    private void txtUsuario5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtUsuario5ActionPerformed
+    private void txtUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtUsuarioActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_txtUsuario5ActionPerformed
+    }//GEN-LAST:event_txtUsuarioActionPerformed
 
     private void txtUsuario6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txtUsuario6MouseClicked
         // TODO add your handling code here:
@@ -401,22 +410,31 @@ jToggleButton1.addActionListener(new ActionListener() {
         // TODO add your handling code here:
     }//GEN-LAST:event_txtUsuario6ActionPerformed
 
-    private void txtUsuario7MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txtUsuario7MouseClicked
+    private void txtDPIMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txtDPIMouseClicked
         // TODO add your handling code here:
-    }//GEN-LAST:event_txtUsuario7MouseClicked
+    }//GEN-LAST:event_txtDPIMouseClicked
 
-    private void txtUsuario7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtUsuario7ActionPerformed
+    private void txtDPIActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtDPIActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_txtUsuario7ActionPerformed
+    }//GEN-LAST:event_txtDPIActionPerformed
 
-    private void txtContraseñaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txtContraseñaMouseClicked
+    private void txtPassMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txtPassMouseClicked
         // TODO add your handling code here:
-        txtContraseña.setText("");
-    }//GEN-LAST:event_txtContraseñaMouseClicked
+        txtPass.setText("");
+    }//GEN-LAST:event_txtPassMouseClicked
 
-    private void jToggleButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton1ActionPerformed
-        
-    }//GEN-LAST:event_jToggleButton1ActionPerformed
+                                                
+
+    private void btnEspañolaActionPerformed(java.awt.event.ActionEvent evt) {                                            
+        vLigaEspa quin = new vLigaEspa();// Esta línea crea un nuevo objeto de la clase,vLigaEspa y lo asigna a la variable quin para trabajar con ella 
+        quin.setVisible(true);//Esta línea establece que la ventana (quin, que es una instancia de vQuiniela) debe ser visible.
+        quin.setLocationRelativeTo(null);//Esta línea coloca la ventana quin en el centro de la pantalla.
+        quin.lblNombre.setText(nombre+" "+ apellido);//Esta línea establece el texto de la etiqueta quin.lblNombre concatenando nombre y apellido con un espacio entre ellos. 
+    }                                              
+
+       
+                                               
+
 
     /**
      * @param args the command line arguments
@@ -454,8 +472,9 @@ jToggleButton1.addActionListener(new ActionListener() {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnCancelar;
-    private javax.swing.JButton btnIngresar;
+    public javax.swing.JButton btnCancelar;
+    public javax.swing.JButton btnIngresar;
+    private javax.swing.JToggleButton btnOjo;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel5;
@@ -464,14 +483,13 @@ jToggleButton1.addActionListener(new ActionListener() {
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JToggleButton jToggleButton1;
-    private javax.swing.JPasswordField txtContraseña;
+    private javax.swing.JTextField txtApellidos;
+    private javax.swing.JTextField txtDPI;
+    private javax.swing.JTextField txtNombre;
+    private javax.swing.JPasswordField txtPass;
+    private javax.swing.JTextField txtTelefono;
     private javax.swing.JTextField txtUsuario;
-    private javax.swing.JTextField txtUsuario1;
     private javax.swing.JTextField txtUsuario3;
-    private javax.swing.JTextField txtUsuario4;
-    private javax.swing.JTextField txtUsuario5;
     private javax.swing.JTextField txtUsuario6;
-    private javax.swing.JTextField txtUsuario7;
     // End of variables declaration//GEN-END:variables
 }

@@ -262,26 +262,26 @@ public class frmLogin extends javax.swing.JFrame {
 
     private void btnLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLoginActionPerformed
       
-        frmVistaPrincipal VistaPrincipal = new frmVistaPrincipal();
-        VistaPrincipal.setVisible(true);
-        VistaPrincipal.setLocationRelativeTo(this);
+        frmVistaPrincipal VistaPrincipal = new frmVistaPrincipal();//Esta línea crea un nuevo objeto VistaPrincipal de la clase frmVistaPrincipal.
+        VistaPrincipal.setVisible(true);//Esta línea hace que la ventana VistaPrincipal sea visible para el usuario.
+        VistaPrincipal.setLocationRelativeTo(this);// La ventana VistaPrincipal será ubicada en relación a este objeto, generalmente en el centro de este.
     }//GEN-LAST:event_btnLoginActionPerformed
 
     private void txtUsuarioMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txtUsuarioMouseClicked
         // TODO add your handling code here:
-        txtUsuario.setText("");
+        txtUsuario.setText("");//Esta linea limpia lo que se ha ingresado en el cajon de texto
     }//GEN-LAST:event_txtUsuarioMouseClicked
 
     private void txtContraseñaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txtContraseñaMouseClicked
         // TODO add your handling code here:
-        txtContraseña.setText("");
+        txtContraseña.setText("");//Esta linea limpia lo que se ha ingresado en el cajon de texto
     }//GEN-LAST:event_txtContraseñaMouseClicked
 
     private void btnCrearCuentaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCrearCuentaActionPerformed
         // TODO add your handling code here:   
-        Participantes frmParticipantes = new Participantes();
-        frmParticipantes.setVisible(true);
-        frmParticipantes.setLocationRelativeTo(this);
+        Participantes frmParticipantes = new Participantes();//Esta línea crea una nueva instancia de la clase Participantes y la almacena en la variable frmParticipantes
+        frmParticipantes.setVisible(true);//Esta línea hace que el formulario frmParticipantes sea visible para el usuario.
+        frmParticipantes.setLocationRelativeTo(this);//Esta línea establece la posición de la ventana frmParticipantes relativa a otro componente (this)
     }//GEN-LAST:event_btnCrearCuentaActionPerformed
 
     private void txtUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtUsuarioActionPerformed
