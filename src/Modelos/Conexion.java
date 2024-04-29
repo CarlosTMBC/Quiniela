@@ -8,28 +8,36 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.swing.JOptionPane;
 /**
  *
  * @author carlt
  */
 public class Conexion {
-     
-    
-    public Connection conectar() {
-        try {
-            String url,user, pass;
-            url = "jdbc:sqlserver://localhost:1433;databaseName=quinielaDB";
-            user = "TMBCLogin";
-            pass = "982020";
-            // Registrar el controlador JDBC
-            Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
-            
-            // Establecer la conexión
-            Connection conn = DriverManager.getConnection(url, user, pass);
-            return conn;
-        } catch (ClassNotFoundException | SQLException e) {
-            System.err.println("Error al conectar a la base de datos: " + e.getMessage());
-            return null;
+    private static Connection conn = null;
+    private static final String URL = "jdbc:mysql://localhost:3306/quinielaDB";
+    private static final String USUARIO = "root";
+    private static final String CONTRASEÑA = "9820";
+
+    public Connection conectar() throws SQLException {
+        if (conn == null) {
+            try {
+                Class.forName("com.mysql.cj.jdbc.Driver");
+                conn = DriverManager.getConnection(URL, USUARIO, CONTRASEÑA);
+                JOptionPane.showMessageDialog(null, "Conexion Establecida");
+            } catch (ClassNotFoundException ex) {
+                System.out.println("Error: No se encontró el driver JDBC");
+            }
+        }
+        return conn;
+    }
+
+    public  void desconectar() throws SQLException {
+        if (conn != null) {
+            conn.close();
+            conn = null;
         }
     }
 }

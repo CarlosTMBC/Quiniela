@@ -4,10 +4,15 @@
  */
 package Vistas;
 
+import Modelos.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.sql.SQLException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.Icon;
 import javax.swing.ImageIcon;
+import javax.swing.JFrame;
 
 /**
  *
@@ -23,22 +28,24 @@ String apellido;//ACA SE ALMACENA APELLIDO DEL PARTICIPANTE
 
     public Participantes() {
         initComponents();
-       Icon iconoActivado = new ImageIcon("C:\\Users\\carlt\\Downloads\\Quiniela\\Quiniela\\src\\Imagenes\\ojo.png");
-Icon iconoDesactivado = new ImageIcon("C:\\Users\\carlt\\Downloads\\Quiniela\\Quiniela\\src\\Imagenes\\invisible.png");
-    btnOjo.addActionListener(new ActionListener() {
-    public void actionPerformed(ActionEvent evt) {
-        if (btnOjo.isSelected()) {
-            // Código a ejecutar cuando el botón está seleccionado
-            btnOjo.setIcon(iconoActivado);
-           txtPass.setEchoChar((char) 0);
-        } else {
-            // Código a ejecutar cuando el botón no está seleccionado
-            btnOjo.setIcon(iconoDesactivado);
-            txtPass.setEchoChar('*');
-        } 
-    }
-});
-
+        Icon iconoActivado = new ImageIcon("C:\\Users\\carlt\\Downloads\\Quiniela\\Quiniela\\src\\Imagenes\\ojo.png");
+        Icon iconoDesactivado = new ImageIcon("C:\\Users\\carlt\\Downloads\\Quiniela\\Quiniela\\src\\Imagenes\\invisible.png");
+        btnOjo.addActionListener(new ActionListener() {
+        public void actionPerformed(ActionEvent evt) {
+            if (btnOjo.isSelected()) {
+                // Código a ejecutar cuando el botón está seleccionado
+                btnOjo.setIcon(iconoActivado);
+               txtPass.setEchoChar((char) 0);
+            } else {
+                // Código a ejecutar cuando el botón no está seleccionado
+                btnOjo.setIcon(iconoDesactivado);
+                txtPass.setEchoChar('\u2022');
+            } 
+    }  
+    
+    
+        });
+    this.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 
     }
 
@@ -129,7 +136,6 @@ Icon iconoDesactivado = new ImageIcon("C:\\Users\\carlt\\Downloads\\Quiniela\\Qu
 
         txtNombre.setBackground(new java.awt.Color(251, 252, 253));
         txtNombre.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        txtNombre.setForeground(new java.awt.Color(204, 204, 204));
         txtNombre.setToolTipText("Nombre de Usuario");
         txtNombre.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 1, 0, new java.awt.Color(127, 219, 228)));
         txtNombre.setName(""); // NOI18N
@@ -170,7 +176,6 @@ Icon iconoDesactivado = new ImageIcon("C:\\Users\\carlt\\Downloads\\Quiniela\\Qu
 
         txtApellidos.setBackground(new java.awt.Color(251, 252, 253));
         txtApellidos.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        txtApellidos.setForeground(new java.awt.Color(204, 204, 204));
         txtApellidos.setToolTipText("Nombre de Usuario");
         txtApellidos.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 1, 0, new java.awt.Color(127, 219, 228)));
         txtApellidos.setName(""); // NOI18N
@@ -187,7 +192,6 @@ Icon iconoDesactivado = new ImageIcon("C:\\Users\\carlt\\Downloads\\Quiniela\\Qu
 
         txtTelefono.setBackground(new java.awt.Color(251, 252, 253));
         txtTelefono.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        txtTelefono.setForeground(new java.awt.Color(204, 204, 204));
         txtTelefono.setToolTipText("Nombre de Usuario");
         txtTelefono.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 1, 0, new java.awt.Color(127, 219, 228)));
         txtTelefono.setName(""); // NOI18N
@@ -204,7 +208,6 @@ Icon iconoDesactivado = new ImageIcon("C:\\Users\\carlt\\Downloads\\Quiniela\\Qu
 
         txtUsuario.setBackground(new java.awt.Color(251, 252, 253));
         txtUsuario.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        txtUsuario.setForeground(new java.awt.Color(204, 204, 204));
         txtUsuario.setToolTipText("Nombre de Usuario");
         txtUsuario.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 1, 0, new java.awt.Color(127, 219, 228)));
         txtUsuario.setName(""); // NOI18N
@@ -221,7 +224,6 @@ Icon iconoDesactivado = new ImageIcon("C:\\Users\\carlt\\Downloads\\Quiniela\\Qu
 
         txtDPI.setBackground(new java.awt.Color(251, 252, 253));
         txtDPI.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        txtDPI.setForeground(new java.awt.Color(204, 204, 204));
         txtDPI.setToolTipText("Nombre de Usuario");
         txtDPI.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 1, 0, new java.awt.Color(127, 219, 228)));
         txtDPI.setName(""); // NOI18N
@@ -238,7 +240,6 @@ Icon iconoDesactivado = new ImageIcon("C:\\Users\\carlt\\Downloads\\Quiniela\\Qu
 
         txtPass.setBackground(new java.awt.Color(251, 252, 253));
         txtPass.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        txtPass.setForeground(new java.awt.Color(204, 204, 204));
         txtPass.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 1, 0, new java.awt.Color(127, 219, 228)));
         txtPass.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -246,7 +247,8 @@ Icon iconoDesactivado = new ImageIcon("C:\\Users\\carlt\\Downloads\\Quiniela\\Qu
             }
         });
 
-        btnOjo.setText("jToggleButton1");
+        btnOjo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/invisible.png"))); // NOI18N
+        btnOjo.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 1, 0, new java.awt.Color(127, 219, 228)));
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -280,7 +282,7 @@ Icon iconoDesactivado = new ImageIcon("C:\\Users\\carlt\\Downloads\\Quiniela\\Qu
                             .addComponent(jLabel8)
                             .addComponent(txtPass, javax.swing.GroupLayout.PREFERRED_SIZE, 296, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(btnOjo, javax.swing.GroupLayout.PREFERRED_SIZE, 1, Short.MAX_VALUE)))
+                        .addComponent(btnOjo, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)))
                 .addGap(179, 179, 179))
         );
         jPanel1Layout.setVerticalGroup(
@@ -299,12 +301,13 @@ Icon iconoDesactivado = new ImageIcon("C:\\Users\\carlt\\Downloads\\Quiniela\\Qu
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jLabel6)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(txtUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 18, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jLabel8)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txtPass, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(txtUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 18, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jLabel8)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(txtPass, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(btnOjo))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jLabel9)
@@ -329,9 +332,7 @@ Icon iconoDesactivado = new ImageIcon("C:\\Users\\carlt\\Downloads\\Quiniela\\Qu
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         pack();
@@ -347,17 +348,18 @@ Icon iconoDesactivado = new ImageIcon("C:\\Users\\carlt\\Downloads\\Quiniela\\Qu
     }//GEN-LAST:event_txtNombreMouseClicked
 
     private void btnIngresarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnIngresarActionPerformed
-
-        vQuiniela quin = new vQuiniela();//SE CREA EL OBJETO vQUINIELA y se ASIGNA A LA VARIABLE quin
-         nombre =this.txtNombre.getText(); //se obtiene el nombre del paticipante del txtnombre y se guarda en la variable nombre
-         apellido =this.txtApellidos.getText();//se obtiene el apellido del paticipante del txtApellidos y se guarda en la variable apellido
-        txtNombre.setText("");//limpia lo antes ingresado en las cajas de texto
-        txtApellidos.setText("");//limpia lo antes ingresado en las cajas de texto
-        this.txtDPI.setText("");//LIMPIA LO INGRESADO EN LA CAJA DE TEXTO txtDPI
-        this.txtTelefono.setText("");//LIMPIA LO INGRESADO EN LA CAJA DE TEXTO txtTelefono
-        quin.lblNombre.setText(nombre+" "+ apellido);// en el objeto quin.lblNombre se va setear y concatenar con lo que se haya almacenado en las variables en nombre y apellido
-
+        ModeloParticipantes mParticipantes = new ModeloParticipantes();
+        mParticipantes.Guardar(1, txtNombre.getText(), txtApellidos.getText(), txtUsuario.getText(), txtPass.getText(), txtTelefono.getText(), txtDPI.getText());
+       // public void Guardar(int id, String nombre, String apellidos, String usuario, String pass, String telefono, String dpi)
     }//GEN-LAST:event_btnIngresarActionPerformed
+//        vQuiniela quin = new vQuiniela();//SE CREA EL OBJETO vQUINIELA y se ASIGNA A LA VARIABLE quin
+//         nombre =this.txtNombre.getText(); //se obtiene el nombre del paticipante del txtnombre y se guarda en la variable nombre
+//         apellido =this.txtApellidos.getText();//se obtiene el apellido del paticipante del txtApellidos y se guarda en la variable apellido
+//        txtNombre.setText("");//limpia lo antes ingresado en las cajas de texto
+//        txtApellidos.setText("");//limpia lo antes ingresado en las cajas de texto
+//        this.txtDPI.setText("");//LIMPIA LO INGRESADO EN LA CAJA DE TEXTO txtDPI
+//        this.txtTelefono.setText("");//LIMPIA LO INGRESADO EN LA CAJA DE TEXTO txtTelefono
+//        quin.lblNombre.setText(nombre+" "+ apellido);// en el objeto quin.lblNombre se va setear y concatenar con lo que se haya almacenado en las variables en nombre y apellido
 
 
     private void txtApellidosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txtApellidosMouseClicked

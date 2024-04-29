@@ -5,45 +5,71 @@
 package Controlador;
 
 import Modelos.*;
-
+import Vistas.*;
+import java.awt.event.*;
+import java.awt.event.ActionListener;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
+import java.sql.*;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.swing.*;
+import javax.swing.table.*;
 /**
  *
  * @author carlt
  */
-public class Controlador {
-    /**
- * Clase que actúa como controlador para la gestión de participantes.
- */
+public class Controlador implements ActionListener, MouseListener {
+Quiniela VistaPrincipal;
+ModeloQuiniela Quiniela;
 
-    private final ModeloParticipantes modelo;
-
-    /**
-     * Constructor del controlador de participantes.
-     * @param modelo El modelo asociado al controlador.
-     */
-    public Controlador(ModeloParticipantes modelo) {
-        this.modelo = modelo;
+    public Controlador(Quiniela VistaPrincipal,ModeloQuiniela Quiniela) {
+        this.VistaPrincipal = VistaPrincipal;
+        this.Quiniela = Quiniela;
+       // this.VistaPrincipal.btnRellenar.addActionListener(this);
+        
+    }
+    
+    
+    
+    
+    
+    
+    
+    @Override
+    public void actionPerformed(ActionEvent e) {
+        if(e.getSource() == this.VistaPrincipal.btnRellenar)
+        {
+            DefaultTableModel TablaModelo2 = null;
+            TablaModelo2 = this.Quiniela.ListarDatosConsulta();
+                this.VistaPrincipal.Tabla.setModel(TablaModelo2);
+        }
     }
 
-    /**
-     * Método para agregar un nuevo participante a la base de datos.
-     * @param nombre El nombre del participante.
-     * @param apellido El apellido del participante.
-     * @param telefono El teléfono del participante.
-     * @param dpi El DPI del participante.
-     * @param nombreUsuario El nombre de usuario.
-     * @param contrasena La contraseña.
-     */
-    public void agregarParticipante(String nombre, String apellido, String telefono, String dpi, String nombreUsuario, String contrasena) {
-        Participantes nuevoParticipante = new Participantes(nombre, apellido, telefono, dpi);
-        Usuarios usuario = new Usuarios(nombreUsuario, contrasena); // Crear un objeto Usuario
-        //boolean exito = modelo.agregarParticipante(nuevoParticipante, usuario);
-       /* if (exito) {
-            System.out.println("Participante agregado con éxito.");
-        } else {
-            System.out.println("Error al agregar participante.");
-        }*/
+    @Override
+    public void mouseClicked(MouseEvent e) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
+
+    @Override
+    public void mousePressed(MouseEvent e) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+
+    @Override
+    public void mouseReleased(MouseEvent e) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+
+    @Override
+    public void mouseEntered(MouseEvent e) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+
+    @Override
+    public void mouseExited(MouseEvent e) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+
+
 }
-
-

@@ -35,13 +35,12 @@ public class frmLogin extends javax.swing.JFrame {
         txtContraseña1 = new javax.swing.JPasswordField();
         btnIngresar1 = new javax.swing.JButton();
         jPanel4 = new javax.swing.JPanel();
-        btnLogin = new javax.swing.JButton();
+        btnIngresar = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
         txtUsuario = new javax.swing.JTextField();
         txtContraseña = new javax.swing.JPasswordField();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
-        jCheckBox1 = new javax.swing.JCheckBox();
         jLabel3 = new javax.swing.JLabel();
         btnCrearCuenta = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
@@ -140,17 +139,17 @@ public class frmLogin extends javax.swing.JFrame {
         jPanel4.setPreferredSize(new java.awt.Dimension(830, 447));
         jPanel4.setLayout(null);
 
-        btnLogin.setBackground(new java.awt.Color(242, 242, 242));
-        btnLogin.setFont(new java.awt.Font("Tahoma", 0, 11)); // NOI18N
-        btnLogin.setForeground(new java.awt.Color(102, 102, 102));
-        btnLogin.setText("INGRESAR");
-        btnLogin.addActionListener(new java.awt.event.ActionListener() {
+        btnIngresar.setBackground(new java.awt.Color(242, 242, 242));
+        btnIngresar.setFont(new java.awt.Font("Tahoma", 0, 11)); // NOI18N
+        btnIngresar.setForeground(new java.awt.Color(102, 102, 102));
+        btnIngresar.setText("INGRESAR");
+        btnIngresar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnLoginActionPerformed(evt);
+                btnIngresarActionPerformed(evt);
             }
         });
-        jPanel4.add(btnLogin);
-        btnLogin.setBounds(610, 340, 90, 30);
+        jPanel4.add(btnIngresar);
+        btnIngresar.setBounds(610, 340, 90, 30);
 
         jLabel2.setFont(new java.awt.Font("Baskerville Old Face", 1, 12)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(0, 153, 153));
@@ -203,19 +202,6 @@ public class frmLogin extends javax.swing.JFrame {
         jPanel4.add(jLabel5);
         jLabel5.setBounds(480, 120, 80, 17);
 
-        jCheckBox1.setBackground(new java.awt.Color(251, 252, 253));
-        jCheckBox1.setFont(new java.awt.Font("Tahoma", 0, 11)); // NOI18N
-        jCheckBox1.setForeground(new java.awt.Color(102, 102, 102));
-        jCheckBox1.setText("Mantener Conectado");
-        jCheckBox1.setFocusable(false);
-        jCheckBox1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jCheckBox1ActionPerformed(evt);
-            }
-        });
-        jPanel4.add(jCheckBox1);
-        jCheckBox1.setBounds(480, 280, 150, 19);
-
         jLabel3.setFont(new java.awt.Font("Baskerville Old Face", 0, 24)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(0, 153, 153));
         jLabel3.setText("Iniciar Sesión");
@@ -260,12 +246,12 @@ public class frmLogin extends javax.swing.JFrame {
         
     }//GEN-LAST:event_btnIngresar1ActionPerformed
 
-    private void btnLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLoginActionPerformed
+    private void btnIngresarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnIngresarActionPerformed
+      Quiniela quin = new Quiniela();
+      quin.setVisible(true);
+      quin.setLocationRelativeTo(null);
       
-        frmVistaPrincipal VistaPrincipal = new frmVistaPrincipal();//Esta línea crea un nuevo objeto VistaPrincipal de la clase frmVistaPrincipal.
-        VistaPrincipal.setVisible(true);//Esta línea hace que la ventana VistaPrincipal sea visible para el usuario.
-        VistaPrincipal.setLocationRelativeTo(this);// La ventana VistaPrincipal será ubicada en relación a este objeto, generalmente en el centro de este.
-    }//GEN-LAST:event_btnLoginActionPerformed
+    }//GEN-LAST:event_btnIngresarActionPerformed
 
     private void txtUsuarioMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txtUsuarioMouseClicked
         // TODO add your handling code here:
@@ -278,19 +264,14 @@ public class frmLogin extends javax.swing.JFrame {
     }//GEN-LAST:event_txtContraseñaMouseClicked
 
     private void btnCrearCuentaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCrearCuentaActionPerformed
-        // TODO add your handling code here:   
-        Participantes frmParticipantes = new Participantes();//Esta línea crea una nueva instancia de la clase Participantes y la almacena en la variable frmParticipantes
-        frmParticipantes.setVisible(true);//Esta línea hace que el formulario frmParticipantes sea visible para el usuario.
-        frmParticipantes.setLocationRelativeTo(this);//Esta línea establece la posición de la ventana frmParticipantes relativa a otro componente (this)
+        Participantes part = new Participantes();
+        part.setVisible(true);
+        part.setLocationRelativeTo(null);
     }//GEN-LAST:event_btnCrearCuentaActionPerformed
 
     private void txtUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtUsuarioActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtUsuarioActionPerformed
-
-    private void jCheckBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jCheckBox1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -330,9 +311,8 @@ public class frmLogin extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public javax.swing.JButton btnCrearCuenta;
+    public javax.swing.JButton btnIngresar;
     private javax.swing.JButton btnIngresar1;
-    public javax.swing.JButton btnLogin;
-    private javax.swing.JCheckBox jCheckBox1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;

@@ -26,7 +26,7 @@ public class ModeloUsuarios {
      * @param contrasena La contraseña del usuario.
      * @return true si la sesión se inicia con éxito, false en caso contrario.
      */
-   public void Guardar(String nombre, String apellido,String telefono, String dpi,String Usuario,String pass)
+   public void Guardar(String nombre, String apellido,String telefono, String dpi,String Usuario,String pass) throws ClassNotFoundException
 {
     try
         {
